@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Практичне заняття №6",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": -92, "left": 205, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led1", "top": -108, "left": 130, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": -38, "left": 95, "attrs": { "value": "220" } },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 235, "left": 105, "rotate": 180, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:2", "btn1:1.l", "green", [ "v0" ] ],
+    [ "btn1:2.l", "uno:GND.1", "black", [ "h0" ] ],
+    [ "uno:8", "r1:2", "orange", [ "v0" ] ],
+    [ "r1:1", "led1:A", "orange", [ "v0" ] ],
+    [ "led1:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
