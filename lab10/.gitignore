@@ -1,0 +1,6 @@
+__bin__/
+bin/
+obj/
+*.pcap
+*.pcapng
+.vs/
